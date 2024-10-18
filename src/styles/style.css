@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* font-family: 'Lato', sans-serif; */
+:root{
+    --input-background : #e5e5e5e5;
+    --text-color : #000;
+    --label-background: #DC5F00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Lato, 'Segoe UI', sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+body{
+    min-height: 100vh;
+    background-image: url('../images/office.jpg');
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+}
+/* Sign-up */
+.wrapper{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    height: 100vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header{
+    padding-bottom: 20px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+form{
+    margin-top: 20px;
+    width: min(400px,100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    display: flex;
+    background-color: var(--label-background);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0px 0px 10px;
+}
+form input{
+    flex-grow: 1;
+    box-sizing: border-box;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid var(--input-background);
+    background-color: var(--input-background);
+    transition: all 150ms ease-in-out;
+}
+
+form input:hover{
+    border: 2px solid var(--label-background);
+}
+form input:focus{
+    outline: none;
+    color: #000;
+    border-color: var(--label-background);
+}
+form > div:has(input:focus) > label{
+    background-color: var(--text-color);
+}
+form > div:has(input:focus) > input{
+    border-color: var(--text-color);;
+}
+
+.submit-btn{
+    margin: 15px 0px;
+    padding: 1rem 1.5rem;
+    border: none;
+    background-color: var(--label-background);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 150ms ease-in-out;
+}
+.submit-btn:hover{
+    background-color: #000;
+}
+
+.another-option{
+    font-weight: 500;
+    color: #525252;
+}
+.another-option > a {
+    text-decoration: none;
+    color: var(--label-background);
+    font-weight: 700;
+    margin: 0 10px;
+    text-transform: uppercase;
+}
