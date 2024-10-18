@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* font-family: 'Lato', sans-serif; */
 :root{
-    --input-background : #e5e5e5e5;
+    --input-background : #f1f1f1;
     --text-color : #000;
     --label-background: #DC5F00;
 }
@@ -17,7 +17,7 @@ html{
 }
 body{
     min-height: 100vh;
-    background-image: url('../images/office.jpg');
+    background-image: url('../images/photo-studio.jpg');
     background-size: cover;
     background-position: right;
     overflow: hidden;
@@ -64,10 +64,13 @@ form label{
     width: 50px;
     align-items: center;
     display: flex;
-    background-color: var(--label-background);
     justify-content: center;
     align-items: center;
     border-radius: 10px 0px 0px 10px;
+}
+.logo-bg{
+    background-color: var(--label-background);
+    border-radius: 10px;
 }
 form input{
     flex-grow: 1;
@@ -85,6 +88,15 @@ form input{
 form input:hover{
     border: 2px solid var(--label-background);
 }
+
+.error{
+    border: 2px solid red;
+    color: red;
+}
+.error-logo{
+    background-color: red;
+}
+
 form input:focus{
     outline: none;
     color: #000;
@@ -128,7 +140,8 @@ form > div:has(input:focus) > input{
     .wrapper{
         height: 100vh;
         width: 100vw;
-        background-image: url(../images/office.jpg);
+        background-image: url('../images/photo-studio.jpg');
+        border-radius: 0px;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -141,9 +154,10 @@ form > div:has(input:focus) > input{
         .wrapper{
             height: 100vh;
             width: 100vw;
-            background-image: url(../images/office.jpg);
+            background-image: url('../images/photo-studio.jpg');
+            border-radius: 0px;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size:cover;
         }
         .another-option{
             font-weight: 500;
